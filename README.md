@@ -3,8 +3,9 @@ Copy messages from Youtube live chat to a Google spreadsheet.
 
 Getting Started
 1. Create a GCP service account, generate a key and download a JSON file.
+2. Add above service account to the spreadsheet as as editor.
    
-2. Create a config.conf file and populate following values:
+3. Create a config.conf file and populate following values:
    ```
    [GoogleSheets]
    creds_path = ./creds.json
@@ -18,13 +19,13 @@ Getting Started
    excluded_author = # an author to be excluded
    ```
    
-3. Create a virtual environment and install dependencies:
+4. Create a virtual environment and install dependencies:
    ```
    python -m venv venv
    pip install pytchat gspread oauth2client emoji
    ```
 
-4. Start the program:
+5. Start the program:
    ```
    source venv/bin/activate
    python main.py
